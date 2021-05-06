@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Esercizio 9</title>
+</head>
+<body>
+    <input type="button" value="Informatica" onclick="on_clickme('http://informatica.uniparthenope.it')">
+    <input type="button" value="Scuola" onclick="on_clickme('https://sisis.uniparthenope.it')">
+    <div id="div1" onclick="on_clickme('https://meteo.uniparthenope.it')">
+        Centro Meteo Uniparthenope<br/>
+    </div>
+    <div id="div2_container">
+        <input type="button" value="+" id="div2_button_show"
+               onclick="toggle_div_visibility('div2')"
+               style="display: none">
+        <input type="button" value="-" id="div2_button_hide"
+               onclick="toggle_div_visibility('div2')"
+               style="display: block">
+        <div id="div2_content" style="display: block">
+            <img src="https://sm.ign.com/t/ign_it/screenshot/default/captain-america-4_sexs.2560.jpg"/>
+        </div>
+    </div>
+    <div id="div3_container">
+        <input type="button" value="+" id="div3_button_show"
+               onclick="toggle_div_visibility('div3')"
+               style="display: none">
+        <input type="button" value="-" id="div3_button_hide"
+               onclick="toggle_div_visibility('div3')"
+               style="display: block">
+        <div id="div3_content" style="display: block">
+            <img src="https://mr.comingsoon.it/rsz/serietv/serie/3111/3111.jpg?preset=pstr300"/>
+        </div>
+    </div>
+    <script language="JavaScript" src="esercizio09.js"></script>
+</body>
+</html>
