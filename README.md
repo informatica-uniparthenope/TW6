@@ -1,5 +1,6 @@
 # TW6
 TECNOLOGIE WEB - Web Technologies
+
 Raffaele Montella - https://www.uniparthenope.it/ugov/person/1204
 
 The course is an introduction to programming applications in the internet environment with references to the use of mobile devices. The course contains an introduction to programming web applications using the LAMP platform (Linux Apache MongoDb Python). Part of the course is devoted to the introduction to Cloud Computing with particular reference to the services offered by Amazon Web Services for web technologies and the Internet of Things with Arduino or similar microcontrollers. During the lessons, continuous references are made to the technologies for the development of mobile multi-platform hybrid applications, the management and representation of spatial data on the web and distributed / wearable pervasive systems.
