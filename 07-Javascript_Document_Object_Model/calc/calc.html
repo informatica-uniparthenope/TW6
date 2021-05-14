@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calc</title>
+    <link rel="sylesheet" href="calc.css">
+</head>
+<body onload="calc_init()">
+    <div id="calc_container">
+    <form>
+        <div id="display_container">
+        <span id="display">0</span>
+        </div>
+        <div id="keyboard_container">
+            <div>
+                <input type="button" id="button_AC" name="button_AC" value="AC"/>
+                <input type="button" id="button_PM" name="button_PM" value="+/-"/>
+                <input type="button" id="button_Perc" name="button_Perc" value="%"/>
+                <input type="button" id="button_OPE_DIV" name="button_DIV" value=":" onclick="calc_keyOpePressed('DIV')"/>
+            </div>
+            <div>
+                <input type="button" id="button_NUM_7" name="button_NUM_7" value="7" onclick="calc_keyNumPressed(7)"/>
+                <input type="button" id="button_NUM_8" name="button_NUM_8" value="8" onclick="calc_keyNumPressed(8)"/>
+                <input type="button" id="button_NUM_9" name="button_NUM_9" value="9" onclick="calc_keyNumPressed(9)"/>
+                <input type="button" id="button_OPE_MUL" name="button_OPE_MUL" value="*" onclick="calc_keyOpePressed('MUL')"/>
+            </div>
+            <div>
+                <input type="button" id="button_NUM_4" name="button_NUM_4" value="4" onclick="calc_keyNumPressed(4)"/>
+                <input type="button" id="button_NUM_5" name="button_NUM_5" value="5" onclick="calc_keyNumPressed(5)"/>
+                <input type="button" id="button_NUM_6" name="button_NUM_6" value="6" onclick="calc_keyNumPressed(6)"/>
+                <input type="button" id="button_OPE_SUB" name="button_OPE_SUB" value="-" onclick="calc_keyOpePressed('SUB')"/>
+            </div>
+            <div>
+                <input type="button" id="button_NUM_1" name="button_NUM_1" value="1" onclick="calc_keyNumPressed(1)"/>
+                <input type="button" id="button_NUM_2" name="button_NUM_2" value="2" onclick="calc_keyNumPressed(2)"/>
+                <input type="button" id="button_NUM_3" name="button_NUM_3" value="3" onclick="calc_keyNumPressed(3)"/>
+                <input type="button" id="button_OPE_ADD" name="button_OPE_ADD" value="+" onclick="calc_keyOpePressed('ADD')"/>
+            </div>
+            <div>
+                <input type="button" id="button_NUM_0" name="button_NUM_0" value="0" onclick="calc_keyNumPressed(0)"/>
+                <input type="button" id="button_DOT" name="button_DOT" value="." onclick="calc_keyDotPressed()" />
+                <input type="button" id="button_CALC" name="button_CALC" value="=" onclick="calc_keyCalcPressed()"/>
+            </div>
+        </div>
+
+    </form>
+    </div>
+    <script language="JavaScript" src="calc.js"></script>
+</body>
+</html>
