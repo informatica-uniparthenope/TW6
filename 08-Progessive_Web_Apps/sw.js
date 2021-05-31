@@ -1,7 +1,7 @@
 let cacheName = 'pwa_2021';
 let filesToCache = [
     'index.html',
-    'css/style.css',
+    'css/css.css',
     'js/main.js'
 ];
 /* Start the service worker and cache all of the app's content */
