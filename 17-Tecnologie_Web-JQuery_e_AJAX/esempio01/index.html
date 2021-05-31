@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <form>
+        <label for="surname">Cognome:</label>
+        <input id="surname" name="surname" type="text">
+        <label for="name">Nome:</label>
+        <input id="name" name="name" type="text">
+        <label for="sex">Sesso:</label>
+        <input id="sex" name="sex" type="text">
+        <label for="birthdate">Nascita:</label>
+        <input id="birthdate" name="birthdate" type="text">
+        <label for="birthplace">Luogo:</label>
+        <input id="birthplace" name="birthplace" type="text">
+        <input type="button" value="Calcola" onclick="italianFiscalCode()">
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <span id="result"></span>
+<script>
+    $(document).ready(function(){
+
+    });
+
+    function italianFiscalCode() {
+
+        $.ajax({
+            url: "http://localhost:5000/api/italian-fiscal-code",
+            type: "POST",
+            data: {
+                surname: $("#surname").val(),
+                name: $("#name").val(),
+                sex: $("#sex").val(),
+                birthdate: $("#birthdate").val(),
+                birthplace: $("#birthplace").val()
+            },
+            success: function( result ) {
+                $( "#result" ).html( "<strong>" + result["italianFiscalCode"] + "</strong>" );
+            }
+        });
+    }
+
+</script>
+</body>
+</html>
