@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Esempio 02 Leaflet + GeoJson</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+          integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+          crossorigin=""></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="mapid" style="height: 512px"></div>
+
+<script>
+  var geoJsonFeature = {
+    "type": "Feature",
+    "properties": {},
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            14.207189083099365,
+            40.7999875750402
+          ],
+          [
+            14.20708179473877,
+            40.79980889789757
+          ],
+          [
+            14.204614162445068,
+            40.798655606587815
+          ],
+          [
+            14.204378128051756,
+            40.79901296660091
+          ],
+          [
+            14.203798770904541,
+            40.7989804794065
+          ],
+          [
+            14.203369617462158,
+            40.79863936290515
+          ],
+          [
+            14.203755855560303,
+            40.798005856180595
+          ],
+          [
+            14.20506477355957,
+            40.79756727106044
+          ],
+          [
+            14.208669662475586,
+            40.79946778565333
+          ],
+          [
+            14.208669662475586,
+            40.80034492788255
+          ],
+          [
+            14.207918643951416,
+            40.80083222411258
+          ],
+          [
+            14.20725345611572,
+            40.80057233323509
+          ],
+          [
+            14.207189083099365,
+            40.7999875750402
+          ]
+        ]
+      ]
+    }
+  }
+
+
+  $(document).ready(function(){
+    let mymap = L.map('mapid').setView([40.856725, 14.284556], 18);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(mymap);
+
+    let marker = L.marker([40.856725, 14.284556]).addTo(mymap);
+    marker.on("click", function (e) {
+      marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+      let range = L.circle(e.latlng,100).addTo(mymap)
+    })
+
+    let geoJsonLayer=L.geoJSON(geoJsonFeature).addTo(mymap);
+
+  });
+</script>
+</body>
+</html>
