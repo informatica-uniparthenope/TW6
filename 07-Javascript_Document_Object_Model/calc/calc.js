@@ -4,6 +4,8 @@ let currentOperand=NaN
 
 function calc_init() {
     console.log("calc_init")
+    let display=document.getElementById("display")
+    display.innerText="0"
 }
 
 function calc_keyNumPressed(numPressed) {
