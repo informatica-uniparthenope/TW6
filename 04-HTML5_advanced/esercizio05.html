@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GET DEMO</title>
+</head>
+<body>
+<form method="get" action="esercizio05.html">
+    <label for="login">Login:</label>
+    <input type="text" id="login" name="login"/><br/>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"/><br/>
+    <input type="submit"/>
+</form>
+<script>
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+    // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+    let login = params.login; // "some_value"
+    let password = params.password; // "some_value"
+
+    if (login) {
+        document.getElementById("login").setAttribute("value", login)
+    }
+    if (password) {
+        document.getElementById("password").setAttribute("value", password)
+    }
+</script>
+</body>
+</html>
+
