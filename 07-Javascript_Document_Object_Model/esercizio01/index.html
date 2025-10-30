@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Esercizio 07/01</title>
+</head>
+<body>
+<script>
+    function manDiv(id,action) {
+        if (action === "show") {
+            action = "block"
+        } else {
+            action = "none";
+        }
+        document.getElementById(id).style.display = action;
+    }
+</script>
+<button onclick="manDiv('div1','show')">Show</button>
+<button onclick="manDiv('div1','hide')">Hide</button>
+<div id="div1" style="display:none"></div>
+<button onclick="manDiv('div2','show')">Show</button>
+<button onclick="manDiv('div2','hide')">Hide</button>
+<div id="div2" style="display:block"></div>
+
+</body>
+</html>
