@@ -1,4 +1,4 @@
-let cacheName = 'pwa01';
+let cacheName = 'pwa02';
 let filesToCache = [
     'index.html',
     'css/style.css',

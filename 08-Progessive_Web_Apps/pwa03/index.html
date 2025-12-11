@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PWA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="white"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/functions.js"></script>
+</head>
+<body class="fullscreen">
+    <div id="container">
+        <h1 class="title">Hello World!</h1>
+        <form id="login">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <button type="button" onclick="performLogin()">Login</button>
+        </form>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
