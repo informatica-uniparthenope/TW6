@@ -1,6 +1,6 @@
 {
-  "name": "Hello World 2021",
-  "short_name": "Hello21",
+  "name": "Hello World!",
+  "short_name": "HelloWorld",
   "lang": "en-US",
   "start_url": "index.html",
   "display": "standalone",
